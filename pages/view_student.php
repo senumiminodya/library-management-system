@@ -25,8 +25,8 @@ $result = $conn->query($sql);
                             <td><?php echo htmlspecialchars($row['SName']); ?></td>
                             <td><?php echo htmlspecialchars($row['Grade']); ?></td>
                             <td>
-                                <a href="edit-student.php?id=<?php echo $row['SID']; ?>" class="btn-edit">Edit</a>
-                                <a href="delete-student.php?id=<?php echo $row['SID']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
+                                <a href="?page=edit-student.php&id=<?php echo $row['SID']; ?>" class="btn-edit">Edit</a>
+                                <a href="?page=delete-student.php&id=<?php echo $row['SID']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
