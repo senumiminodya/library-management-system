@@ -27,8 +27,8 @@ $result = $conn->query($sql);
                             <td><?php echo htmlspecialchars($row['BID']); ?></td>
                             <td><?php echo htmlspecialchars($row['IssueDate']); ?></td>
                             <td>
-                                <a href="edit-issued_book.php?id=<?php echo $row['IssueID']; ?>" class="btn-edit">Edit</a>
-                                <a href="delete-issued_book.php?id=<?php echo $row['IssueID']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this issued book?');">Delete</a>
+                                <a href="?page=edit-issued_book.php&id=<?php echo $row['IssueID']; ?>" class="btn-edit">Edit</a>
+                                <a href="?page=delete-issued_book.php&id=<?php echo $row['IssueID']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this issued book?');">Delete</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

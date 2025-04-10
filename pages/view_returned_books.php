@@ -28,8 +28,8 @@ $result = $conn->query($sql);
                             <td><?php echo htmlspecialchars($row['BID']); ?></td>
                             <td><?php echo htmlspecialchars($row['ReturnDate']); ?></td>
                             <td>
-                                <a href="edit-returned_book.php?id=<?php echo $row['IssueID']; ?>" class="btn-edit">Edit</a>
-                                <a href="delete-returned_book.php?id=<?php echo $row['IssueID']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this returned book?');">Delete</a>
+                                <a href="?page=edit-returned_book.php&id=<?php echo $row['IssueID']; ?>" class="btn-edit">Edit</a>
+                                <a href="?page=delete-returned_book.php&id=<?php echo $row['IssueID']; ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this returned book?');">Delete</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>
